@@ -14,17 +14,15 @@ func indexOfMinimal(arr []int) int  {
 }
 
 //swap swaps the elements of arr at index1 and index2
-func swap(arr []int, index1 int, index2 int) []int{
+func swap(arr []int, index1 int, index2 int){
     arr[index1], arr[index2] = arr[index2], arr[index1]
-    return arr
 }
 
 //SelectionSort Returns the slice sorted with selection sort
-func SelectionSort(arr []int) []int{
+func SelectionSort(arr []int){
     for i := range arr{
-        arr = swap(arr, i, i+indexOfMinimal(arr[i:]))
+        swap(arr, i, i+indexOfMinimal(arr[i:]))
     }
-    return arr
 }
 
 
