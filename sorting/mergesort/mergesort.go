@@ -6,9 +6,7 @@ func merge(arr []int, half int){
     copy(lowSlice, arr[:half])
     highSlice := make([]int, len(arr[half:]))
     copy(highSlice, arr[half:])
-    i := 0;
-    j := 0;
-    k := 0;
+    i, j, k := 0, 0, 0;
     for i < len(lowSlice) && j < len(highSlice){
         if lowSlice[i] <= highSlice[j]{
             arr[k] = lowSlice[i]
